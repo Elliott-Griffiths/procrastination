@@ -1,0 +1,35 @@
+---
+// Procrastination Toolkit component
+const tools = [
+    {
+        title: "The Infinite Scroll",
+        description: "Social media feeds, news articles, cat videos. The possibilities are endless, just like your undone tasks."
+    },
+    {
+        title: "The \"Just One More Episode\" Syndrome",
+        description: "Because understanding the intricate plot of that new series is clearly more important than your actual job."
+    },
+    {
+        title: "The \"Sudden Urge to Clean\"",
+        description: "Your house has never been cleaner, your task list has never been longer. Coincidence? I think not."
+    },
+    {
+        title: "The \"Deep Dive Research\"",
+        description: "You started researching quantum physics for a report on marketing strategies. Excellent use of time!"
+    }
+];
+---
+
+<section class="bg-green-50 p-6 rounded-xl shadow-inner border border-green-200">
+    <h2 class="text-2xl md:text-3xl font-bold text-green-800 mb-4">
+        Your Procrastination Toolkit 🛠️
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {tools.map((tool) => (
+            <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">{tool.title}</h3>
+                <p class="text-gray-600">{tool.description}</p>
+            </div>
+        ))}
+    </div>
+</section>

@@ -1,0 +1,30 @@
+---
+// Interactive procrastination button
+---
+
+<div class="text-center pt-4">
+    <button 
+        id="procrastinate-btn"
+        class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+    >
+        Click Here to Procrastinate Further!
+    </button>
+    <p class="text-sm text-gray-500 mt-2">
+        (Warning: May just refresh the page, or do absolutely nothing.)
+    </p>
+</div>
+
+<script>
+    document.getElementById('procrastinate-btn')?.addEventListener('click', function() {
+        const actions = [
+            () => alert('Congratulations! You just procrastinated by clicking this button. 🎉'),
+            () => window.location.reload(),
+            () => alert('Task successfully avoided! 🏆'),
+            () => alert('You could be doing something productive right now... but here we are. 😅'),
+            () => console.log('Achievement unlocked: Master Procrastinator!')
+        ];
+        
+        const randomAction = actions[Math.floor(Math.random() * actions.length)];
+        randomAction();
+    });
+</script>

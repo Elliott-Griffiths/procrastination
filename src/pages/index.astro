@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ProcrastinationToolkit from '../components/Toolkit.astro';
+import Mantras from '../components/Mantras.astro';
+import ProcrastinateButton from '../components/Button.astro';
+---
+
+<Layout title="The Official Guide to Procrastination">
+    <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl p-8 md:p-12 space-y-8">
+        <Hero />
+
+        <main class="space-y-8">
+            <section class="bg-purple-50 p-6 rounded-xl shadow-inner border border-purple-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-purple-800 mb-4">
+                    Why Bother Doing it Now?
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    The universe is vast, time is an illusion, and that deadline is probably more of a "suggestion." Why rush perfection when you can let ideas marinate (and then panic-sprint at the last minute)? It builds character. Probably.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>More time for "strategic thinking" (aka staring blankly at a wall).</li>
+                    <li>The thrill of the last-minute rush is unmatched.</li>
+                    <li>Discovering new dust bunnies under the couch is crucial research.</li>
+                </ul>
+            </section>
+
+            <ProcrastinationToolkit />
+            <Mantras />
+            <ProcrastinateButton />
+        </main>
+
+        <footer class="text-center text-gray-500 text-sm pt-8 border-t border-gray-200 mt-8">
+            <p>&copy; 2025 The Procrastinators' Collective. All rights reserved. (Eventually.)</p>
+            <p>Disclaimer: This site is for entertainment purposes only. Please do your actual work. Eventually.</p>
+        </footer>
+    </div>
+</Layout>
